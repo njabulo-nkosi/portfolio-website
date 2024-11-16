@@ -1,0 +1,28 @@
+{% include "header.html" %}
+
+{% from 'bootstrap5/form.html' import render_form %}
+{% block title %}{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-5" style="background-color: #C9C9CB;">
+  <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Contact</h1>
+
+
+  {{ render_form(form) }}
+
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="mt-4">
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }} text-center" role="alert">
+            {{ message }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+</div>
+{% endblock %}
+
+{% include "footer.html" %}
