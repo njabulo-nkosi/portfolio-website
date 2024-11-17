@@ -35,7 +35,8 @@ def home():
 
 @app.route('/behind_the_code')
 def behind_the_code():
-    return render_template("behind_the_code.html")
+    current_year = datetime.now().year
+    return render_template("behind_the_code.html", year=current_year)
 
 
 @app.route('/credits')

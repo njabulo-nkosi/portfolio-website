@@ -1,7 +1,7 @@
 .full-width-container {
     padding-left: 0 !important;
     padding-right: 0 !important;
-    background-color: #C9C9CB;
+    background-color: #A6BEC8;
 }
 
 .btn {
@@ -15,9 +15,9 @@ svg {
 }
 
 .responsive-image {
-  max-width: 70%; /* Slightly smaller for desktop */
+  max-width: 70%;
   height: auto;
-  margin: 0 auto; /* Center image horizontally */
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -31,6 +31,17 @@ svg {
   }
 
   .responsive-image {
-    max-width: 100%; /* Full width for tablets and smaller screens */
+    max-width: 100%;
   }
+}
+
+#submit {
+    background-color: #3E535E; /* Tan color */
+    color: #fff; /* Ensure text color is visible */
+    border: none; /* Optional: Remove border for a cleaner look */
+}
+
+#submit:hover {
+    background-color: #212529; /* Slightly darker tan on hover */
+    color: #fff; /* Maintain text color */
 }
