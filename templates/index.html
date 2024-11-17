@@ -1,32 +1,57 @@
 {% include "header.html" %}
 
-<div class="container-fluid col-xxl-8 px-4 py-5" style="background-color: #C9C9CB;">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" style="padding-left: 0; padding-right: 0;">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="{{ url_for('static', filename='avatar-nj.png') }}" class="d-block mx-lg-auto img-fluid" alt="Avatar" width="700" height="500" loading="lazy">
-      </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Python Developer, Backend Developer & Student.</h1>
-        <p class="lead">Junior Python Developer with a passion for programming and designing software.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <a href="https://github.com/njabulo-nkosi" target="_blank" class="btn btn-primary btn-lg px-4 me-md-2" style="border-color: #6E07F3; background-color: #6E07F3; color: #fff;">GitHub</a>
-          <a href="https://www.linkedin.com/in/njabulo-nkosi-71a11422a" target="_blank" class="btn btn-primary btn-lg px-4 me-md-2" style="border-color: #6E07F3; background-color: #6E07F3; color: #fff;">LinkedIn</a>
-        </div>
-      </div>
+<!-- Hero Section -->
+<div class="container-fluid px-4 py-5" style="background-color: #C9C9CB;">
+  <div class="row align-items-center g-5 py-5">
+    <!-- Image Section -->
+    <div class="col-12 col-md-6 order-md-2 text-center">
+      <img
+        src="{{ url_for('static', filename='avatar-nj.png') }}"
+        class="img-fluid"
+        alt="Avatar"
+        loading="lazy"
+        style="max-width: 100%; height: auto;"
+      >
     </div>
-  </div>
-
-<div class="px-4 py-0 my-0 text-center" style="background-color: #C9C9CB;">
-    <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='Developer activity-amico.png') }}" alt="Laptop" width="600" height="600">
-    <h1 class="display-5 fw-bold text-body-emphasis">Hi, I’m Njabulo—great to meet you!</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-0">My journey in tech has been guided by a passion for software development. Along the way, I’ve built APIs, crafted dynamic web applications, and explored the power of data through insightful visualizations. From automating workflows with Selenium to hosting Flask projects, I thrive on tackling challenges and finding innovative solutions.
+    <!-- Text Section -->
+    <div class="col-12 col-md-6 order-md-1 text-center text-md-start">
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+        Python Developer, Backend Developer & Student.
+      </h1>
+      <p class="lead">
+        Junior Python Developer with a passion for programming and designing software.
       </p>
-<!--      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">-->
-<!--        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>-->
-<!--        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>-->
-<!--      </div>-->
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a href="https://github.com/njabulo-nkosi" target="_blank"
+           class="btn btn-primary btn-lg px-4 me-md-2"
+           style="border-color: #6E07F3; background-color: #6E07F3; color: #fff;">
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/njabulo-nkosi-71a11422a" target="_blank"
+           class="btn btn-primary btn-lg px-4"
+           style="border-color: #6E07F3; background-color: #6E07F3; color: #fff;">
+          LinkedIn
+        </a>
+      </div>
     </div>
   </div>
+</div>
+
+<!-- Introduction Section -->
+<div class="px-4 py-5 text-center" style="background-color: #C9C9CB;">
+  <img
+    src="{{ url_for('static', filename='Developer activity-amico.png') }}"
+    alt="Laptop"
+    class="img-fluid mx-auto mb-4 responsive-image"
+
+  >
+  <h1 class="display-5 fw-bold text-body-emphasis">Hi, I’m Njabulo—great to meet you!</h1>
+  <div class="col-lg-8 col-md-10 mx-auto">
+    <p class="lead mb-4">
+      My journey in tech has been guided by a passion for software development. Along the way, I’ve built APIs, crafted dynamic web applications, and explored the power of data through insightful visualizations. From automating workflows with Selenium to hosting Flask projects, I thrive on tackling challenges and finding innovative solutions.
+    </p>
+  </div>
+</div>
 
 {% include "footer.html" %}
+

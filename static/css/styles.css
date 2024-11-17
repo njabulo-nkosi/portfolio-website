@@ -3,3 +3,34 @@
     padding-right: 0 !important;
     background-color: #C9C9CB;
 }
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.responsive-image {
+  max-width: 70%; /* Slightly smaller for desktop */
+  height: auto;
+  margin: 0 auto; /* Center image horizontally */
+}
+
+@media (max-width: 768px) {
+  .text-end {
+    text-align: center !important;
+  }
+
+  .d-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .responsive-image {
+    max-width: 100%; /* Full width for tablets and smaller screens */
+  }
+}
