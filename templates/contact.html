@@ -4,24 +4,31 @@
 {% block title %}{% endblock %}
 
 {% block content %}
-<div class="container-fluid py-5" style="background-color: #A6BEC8;">
-  <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Contact</h1>
+<div class="container-fluid py-5" style="background-color: #E6EEF2;">
+  <div class="container">
+    <h1 class="display-4 fw-bold text-center text-body-emphasis mb-4">Get in Touch</h1>
+    <p class="lead text-center mb-5">Have any questions or feedback? Fill out the form below, let's connect.</p>
 
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <!-- Render the contact form -->
+        {{ render_form(form) }}
 
-  {{ render_form(form) }}
-
-
-  {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-      <div class="mt-4">
-        {% for category, message in messages %}
-          <div class="alert alert-{{ category }} text-center" role="alert">
-            {{ message }}
-          </div>
-        {% endfor %}
+        <!-- Flash messages for feedback -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="mt-4">
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }} text-center" role="alert">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
       </div>
-    {% endif %}
-  {% endwith %}
+    </div>
+  </div>
 </div>
 {% endblock %}
 

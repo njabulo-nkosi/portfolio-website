@@ -1,13 +1,13 @@
 {% include "header.html" %}
 
 <!-- Hero Section -->
-<div class="container-fluid px-4 py-5" style="background-color: #A6BEC8;">
+<div class="container-fluid px-4 py-5" style="background-color: #E6EEF2;">
   <div class="row align-items-center g-5 py-5">
     <!-- Image Section -->
     <div class="col-12 col-md-6 order-md-2 text-center">
       <img
         src="{{ url_for('static', filename='avatar-nj.png') }}"
-        class="img-fluid"
+        class="img-fluid rounded-circle shadow-lg"
         alt="Avatar"
         loading="lazy"
         style="max-width: 100%; height: auto;"
@@ -20,6 +20,8 @@
       </h1>
       <p class="lead">
         Junior Python Developer with a passion for programming and designing software.
+        Proficient in Python and its core libraries, I possess a strong foundation in
+        object-oriented programming, data structures, and algorithms.
       </p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
         <a href="https://github.com/njabulo-nkosi" target="_blank"
@@ -38,20 +40,63 @@
 </div>
 
 <!-- Introduction Section -->
-<div class="px-4 py-5 text-center" style="background-color: #A6BEC8;">
-  <img
-    src="{{ url_for('static', filename='Developer-activity-amico.png') }}"
-    alt="Laptop"
-    class="img-fluid mx-auto mb-4 responsive-image"
-
-  >
+<div class="container px-4 py-5 text-center" style="background-color: #E6EEF2;">
+<!--  <img-->
+<!--    src="{{ url_for('static', filename='Developer-activity-amico.png') }}"-->
+<!--    alt="Laptop"-->
+<!--    class="img-fluid mx-auto mb-4"-->
+<!--    loading="lazy"-->
+<!--    style="max-width: 30%;"-->
+<!--  >-->
   <h1 class="display-5 fw-bold text-body-emphasis">Hi, I’m Njabulo—great to meet you!</h1>
-  <div class="col-lg-8 col-md-10 mx-auto">
-    <p class="lead mb-4">
-      My journey in tech has been guided by a passion for software development. Along the way, I’ve built APIs, crafted dynamic web applications, and explored the power of data through insightful visualizations. From automating workflows with Selenium to hosting Flask projects, I thrive on tackling challenges and finding innovative solutions.
-    </p>
+  <p class="lead mb-4">
+    My journey in tech has been guided by a passion for software development. Along the way, I’ve built APIs, crafted dynamic web applications, and explored the power of data through insightful visualizations. From automating workflows with Selenium to hosting Flask projects, I thrive on tackling challenges and finding innovative solutions.
+  </p>
+</div>
+
+<!-- Cards Section -->
+<div class="container-fluid px-4 py-5" id="custom-cards" style="background-color: #E6EEF2;">
+  <h2 class="pb-2 display-5 fw-bold border-bottom text-center">Featured Projects</h2>
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    <!-- Card 1 -->
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('static/abhijith-s-nair-AvKsX5ZOQnA-unsplash.jpg'); background-size: cover; background-position: center;">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Automated Tech News</h3>
+<!--          <p>-->
+<!--            Tech news web scraper program that sends an email of tech news daily.-->
+<!--          </p>-->
+          <a href="https://github.com/njabulo-nkosi/tech_news_web_scraper_program" target="_blank" class="text-white">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('static/niketh-vellanki-QkSN_8XcXwQ-unsplash.jpg'); background-size: cover; background-position: center;">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Daily Space Explorer</h3>
+<!--          <p>-->
+<!--            "Astronomy Picture of the Day" and Mars weather information.-->
+<!--          </p>-->
+          <a href="https://github.com/njabulo-nkosi/api_web_app" target="_blank" class="text-white">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('static/anirudh-KmQbT4FQvGQ-unsplash.jpg'); background-size: cover; background-position: center;">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">E-Commerce Website</h3>
+<!--          <p>-->
+<!--            Flask-based eCommerce platform.-->
+<!--          </p>-->
+          <a href="https://github.com/njabulo-nkosi/logistics_online_shop" target="_blank" class="text-white">GitHub</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 {% include "footer.html" %}
+
 

@@ -3,51 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Njabulo Nkosi</title>
-
+    <title>Njabulo Nkosi Portfolio</title>
     {% block styles %}
-
     {{ bootstrap.load_css() }}
-
-    <link
-      href="{{ url_for('static', filename='css/styles.css') }}"
-      rel="stylesheet"
-    />
-
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
     {% endblock %}
-
 </head>
 <body>
-    <header class="p-3 text-bg-#C9C9CB" style="background-color: #A6BEC8;">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <svg class="bi me-2" width="80" height="80" role="img" aria-label="Stylized N" viewBox="0 0 100 100">
-    <path d="M20 80 Q30 20, 50 50 T80 20"
-          fill="none"
-          stroke="#3E535E"
-          stroke-width="8"
-          stroke-linecap="round"
-          stroke-linejoin="round" />
-  </svg>
-        </a>
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <!-- Brand/Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#3E535E" class="bi bi-person-circle me-2" viewBox="0 0 16 16">
+                    <path d="M11 8c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"/>
+                    <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-13.995.212A5.978 5.978 0 0 1 8 4c1.268 0 2.451.401 3.42 1.078A6.973 6.973 0 0 0 15 8z"/>
+                </svg>
+                <span class="fw-bold" style="color: #3E535E;">Njabulo Nkosi</span>
+            </a>
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-<!--          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>-->
-<!--          <li><a href="#" class="nav-link px-2 text-white">About</a></li>-->
-<!--          <li><a href="#" class="nav-link px-2 text-white">Contact</a></li>-->
-        </ul>
+            <!-- Toggle Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<!--        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">-->
-<!--          <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">-->
-<!--        </form>-->
-
-        <div class="text-end">
-          <a href="{{ url_for('behind_the_code') }}" class="btn btn-outline-light me-2">Behind The Code</a>
-            <a href="{{ url_for('contact') }}" class="btn btn-primary" style="border-color: #3E535E; background-color: #3E535E;">Get in Touch</a>
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('behind_the_code') }}">Behind The Code</a>
+                    </li>
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#about">About</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>-->
+<!--                    </li>-->
+                </ul>
+                <!-- Action Buttons -->
+                <div class="d-flex ms-lg-3">
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary me-2" style="background-color: #3E535E; border-color: #3E535E;">Get in Touch</a>
+<!--                    <a href="#portfolio" class="btn btn-outline-primary">Portfolio</a>-->
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </nav>
 </body>
 </html>
